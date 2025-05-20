@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+           
+           body{
+            background: rgb(255, 0, 0);
+                background: linear-gradient(0deg, rgb(104, 3, 3) 50%, rgb(239, 137, 137) 100%);
+           } 
+           main{
+                
+                width: 1000px;                                
+                
+                overflow: auto;
+                margin: 10px auto;
+            }
+            div{
+                box-shadow: 5px 5px 5px gray;      
+                text-align: center;
+                background-size: contain;
+                color:black;
+                font-weight: bold;  
+                align-content: center;
+                margin:20px;
+                border-color:white;
+                border-style: solid;
+                border-width: 10px;
+                width: 180px;
+                height: 180px;
+                float:left;
+                color:rgb(255, 255, 255);
+                padding: 5px;
+                border-radius: 100%;   
+                
+                transition:blur(3px) 1s ease;
+                
+            }
+            div:hover{
+                cursor: hand;   
+                
+                transition-duration: 0.5s;
+                filter:blur(0px);
+                
+            }
+            main :nth-child(1){
+                background-color: rgb(123, 3, 3);
+                background-image: url(1.webp);
+                
+            }
+            main :nth-child(2){
+                background-color: rgb(134, 22, 22);
+                background-image: url(3.jpg);
+               
+
+            }
+            main :nth-child(3){
+                background-color: rgb(146, 57, 57);
+                background-image: url(2.jpg);
+                background-position: center;
+                background-size: 150%;
+            }
+            main :nth-child(4){
+                background-color: rgb(156, 106, 106);
+                background-image: url(4.webp);
+                background-size: 180%;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div>Kangal Köpeği
+   
+            </div>
+            <div>Köfte</div>
+            <div>Kongre Binası</div>
+            <div>Ulupınar Gölü</div>
+        </main>
+    </body>
+</html>

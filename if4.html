@@ -1,0 +1,21 @@
+<form>
+  <label for="ehliyet">ehliyet tipini seciniz</label>
+  <select id="ehliyet">
+    <option value="A1">125CC</option>
+    <option value="A2">600CC</option>
+    <option value="A">600CC+</option>
+    <option value="B1">ATV</option>
+    <option value="B">OTOMOBİL</option>
+  </select>
+  <div id="sonuc"></div>
+  <button id="btnEhliyet">araçları yaz</button>
+</form>
+<script>
+  document.querySelector("#btnehliyet").addEventListener("click", function () {
+    let harf = document.querySelector("#ehliyet").value;
+    let div = document.querySelector("#sonuc");
+    if (harf == "A1") {
+      div.innerHTML = "125CC Ye kadar motorsiklet";
+    }
+  });
+</script>

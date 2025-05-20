@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table width="30%" align="center" >
+            <tr>
+                <td>Kredi Oranı</td>
+                <td><input type="number" min="0" max="10" step="0.1"  ></td>
+            </tr>
+            <tr>
+                <td>Ana Para</td>
+                <td><input type="range" value="10000" min="1" max="100000"
+                     oninput="this.nextElementSibling.value = this.value">
+                    <output>10000</output></td>
+            </tr>
+            <tr>
+                <td><label for="dosya">Maaş Bordrosu-PDF</label> </td>
+                <td><input type="file"  name="dosya" id="dosya"></td>
+            </tr>
+            <tr>
+                <td><label for="tckn">Tc Kimlik Numarası</label></td>
+                <td>
+                    <input type="text" pattern="[0-9]{11}" required  
+                    maxlength="11" minlength="11" 
+                    name="tckn" id="tckn">
+                
+                </td>
+            </tr>
+            <tr>
+                <td><button type="reset">Sıfırla</button></td>
+                <td><button type="submit">Gönder</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<body>
+  <input id="kod" max="81" min="1" type="number" />
+  <button id="btnBul">Plaka Bul</button>
+</body>
+<script>
+  document.querySelector("#btnBul").addEventListener("click", function () {
+    let kod = Number(document.querySelector("#kod").value);
+    if (kod == 34) {
+      alert("İstanbul");
+    } else if (kod == 22) {
+      alert("Edirne");
+    } else if (kod == 67) {
+      alert("Zonguldak");
+    } else if (kod == 44) {
+      alert("Malatya");
+    } else {
+      alert("Bilinmeyen Memleket");
+    }
+  });
+</script>

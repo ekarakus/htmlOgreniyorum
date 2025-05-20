@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>emre</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <div id="bilgi" class="text-center p-4 bg-white shadow rounded"></div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let adres = "https://randomuser.me/api?nat=tr";
+      $(document).ready(function () {
+        $.ajax({
+          beforeSend: function () {
+            $("#bilgi").html(
+              `<div class="spinner-border text-primary" role="status">
+                 <span class="visually-hidden">Yükleniyor...</span>
+               </div>`
+            );
+          },
+          url: adres,
+          type: "GET",
+          dataType: "json",
+          success: function (veri) {
+            console.log(veri.results[0]);
+            $("#bilgi").html(
+              `<h1 class="h4">${veri.results[0].name.first} ${veri.results[0].name.last}</h1>
+               <img src="${veri.results[0].picture.large}" alt="User Picture" class="img-fluid rounded-circle mb-3" />
+               <p class="mb-0"><strong>Adres:</strong></p>
+               <p>${veri.results[0].location.street.name} ${veri.results[0].location.street.number}, ${veri.results[0].location.city}, ${veri.results[0].location.state}</p>`
+            );
+          },
+          error: function (hata) {
+            alert("Hata oluştu: " + hata.statusText);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

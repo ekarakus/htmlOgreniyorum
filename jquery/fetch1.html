@@ -1,0 +1,28 @@
+<body>
+  <div>
+    <input type="number" id="txtTutar" placeholder="Tutarı Giriniz"/>
+    <button type="button" id="btnHesapla">$ -> TRY Dönüştür</button>
+  </div>
+  <div id="sonuc"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    let alis, satis, doviz;
+    fetch("https://hasanadiguzel.com.tr/api/kurgetir")
+      .then((cevap) => cevap.json())
+      .then((veri) => {
+        alis = veri.TCMB_AnlikKurBilgileri[0].BanknoteBuying;
+        satis = veri.TCMB_AnlikKurBilgileri[0].BanknoteSelling;
+        doviz = veri.TCMB_AnlikKurBilgileri[0].CurrencyName;
+      })
+      .catch((hata) => {
+        alert("Hata: " + hata);
+      });
+      $(document).ready(function () {
+        $("#btnHesapla").click(function () {
+           let tutar=Number($("#txtTutar").val());
+           let sonuc=tutar*alis;
+           $("#sonuc").html(tutar+" "+doviz+" = "+sonuc.toFixed(2)+" TL");
+        });
+      });
+  </script>
+</body>

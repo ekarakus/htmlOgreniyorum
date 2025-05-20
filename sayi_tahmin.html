@@ -1,0 +1,26 @@
+<body>
+  <h1>Sayı Tahmin Oyunu</h1>
+  <button id="btnStart">Oyuna başla</button>
+</body>
+<script>
+  window.addEventListener("load", function (event) {
+    let btn = document.querySelector("#btnStart");
+    btn.addEventListener("click", function () {
+      let sayi = Math.ceil(Math.random() * 100);
+      let alt = 0,
+        sayac = 1,
+        ust = 100;
+      let tahmin;
+      do {
+        tahmin = Number(prompt(`Sayı Giriniz [${alt} - ${ust}]`));
+        if (tahmin < sayi) {
+          alt = tahmin;
+        } else {
+          ust = tahmin;
+        }
+        sayac++;
+      } while (sayi != tahmin);
+      alert(`Tebrikler Bildiniz Sayı ${sayi} ${sayac} Defada Bildiniz.`);
+    });
+  });
+</script>

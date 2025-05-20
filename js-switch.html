@@ -1,0 +1,36 @@
+<input disabled id="sonuc" />
+<input type="number" min="1" max="7" id="gun">
+<button onclick="bul()" id="btnbul">gün bul</button>
+<script>
+  function bul() {
+    let gun = Number(document.querySelector("#gun").value);
+    let gunAdi;
+    switch (gun) {
+      case 1:
+        gunAdi = "Pazartesi";
+        break;
+      case 2:
+        gunAdi = "Salı";
+        break;
+      case 3:
+        gunAdi = "Çarşamba";
+        break;
+      case 4:
+        gunAdi = "Perşembe";
+        break;
+      case 5:
+        gunAdi = "Cuma";
+        break;
+      case 6:
+        gunAdi = "Cumartesi";
+        break;
+      case 7:
+        gunAdi = "Pazar";
+        break;
+      default:
+        gunAdi = "Geçersiz gün";
+    }
+    //console.log("Bugün günlerden " + gunAdi);
+    document.querySelector("#sonuc").value = gunAdi;
+  }
+</script>

@@ -1,0 +1,40 @@
+<style>
+    div {
+      padding: 10px;
+      border-radius: 10px;
+      transition: all 1s ease; /* Tüm değişiklikler 1 saniyede geçişli olacak */
+    }
+    body > div {
+      background-color: aquamarine;
+    }
+    body > div > div:first-child {
+      background-color: antiquewhite;
+      cursor: pointer;
+    }
+    body > div > div:last-child {
+      font-size: 8pt;
+      padding: 5px;
+      background-color: cadetblue;
+      opacity: 1; /* Görünürlük başlangıçta tam */
+      transition: opacity 1s ease; /* Görünürlük değişimi için geçiş efekti */
+    }
+    div > span {
+      font-weight: bolder;
+      color: white;
+    }
+  
+    /* Hover efektiyle ikinci div'i efektli gizleme */
+    body > div:hover > div:last-child {
+      opacity: 0; /* Görünürlük sıfıra iner */
+    }
+  </style>
+  <body>
+    <div>
+      <div>Spor Ayakkabı</div>
+      <div>
+        Bugüne özel sadece
+        <span>6.900 TL</span>
+      </div>
+    </div>
+  </body>
+  

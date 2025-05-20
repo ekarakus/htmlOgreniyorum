@@ -1,0 +1,14 @@
+<body style="display: flex; align-items: center; justify-content: center">
+  <div id="loading" 
+  style="text-align: center">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
+    />
+    <h3>Yükleniyor...</h3>
+  </div>
+</body>
+<script>
+    setTimeout(()=> {
+        document.querySelector("#loading").style.display="none";
+    }, 2000);
+</script>

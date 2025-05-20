@@ -1,0 +1,21 @@
+<body>
+  <style></style>
+  <textarea id="myTextArea" rows="30" cols="100"></textarea>
+  <div id="info"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#myTextArea").on("input", function () {
+        //girilen ifadeyi alır
+        let metin = $(this).val();
+        //girilen ifadenin karakter sayısını alır
+        let karakterSayisi = metin.length;
+        //kelime sayısını bul
+        let kelimeSayisi= metin.split(" ").length;
+        let mesaj = `Karakter sayısı ${karakterSayisi} 
+        Kelime sayısı ${kelimeSayisi}`;
+        $("#info").text(mesaj);
+      });
+    });
+  </script>
+</body>

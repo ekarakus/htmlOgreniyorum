@@ -1,0 +1,22 @@
+<body>
+  <input id="not1" type="number" placeholder="1.not" min="0" max="100" />
+  <input id="not2" type="number" placeholder="2.not" min="0" max="100" />
+  <button id="hesapla" type="button">Hesapla</button>
+  <div id="sonuc"></div>
+  <script>
+    document.querySelector("#hesapla").addEventListener("click", function () {
+      let not1 = Number(document.querySelector("#not1").value);
+      let not2 = Number(document.querySelector("#not2").value);
+      let ortalama = (not1 + not2) / 2;
+      // document.querySelector("#sonuc").innerHTML=ortalama;
+      let div = document.querySelector("#sonuc");
+      if (ortalama >= 50) {
+        div.style.backgroundColor = "green";
+        div.innerHTML = `${ortalama}   ortalama ile geçti`;
+      } else {
+        div.style.backgroundColor = "red";
+        div.innerHTML = `${ortalama}   ortalama ile kaldı`;
+      }
+    });
+  </script>
+</body>

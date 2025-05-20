@@ -1,0 +1,16 @@
+<body>
+  <script>
+    let d = Number(prompt("Doğru sayısı giriniz"));
+    let y = Number(prompt("Yanlış sayısı giriniz"));
+    let b = Number(prompt("Boş sayısı giriniz"));
+    let sonuc = puanHesapla(d, y, b);
+    alert(sonuc);
+    function puanHesapla(dogru, yanlis, bos) {
+      let soruSayisi = dogru + yanlis + bos;
+      let netDegeri = 100 / soruSayisi;
+      let net= dogru-yanlis/3
+      let puan = net * netDegeri;
+      return puan;
+    }
+  </script>
+</body>

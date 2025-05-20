@@ -1,0 +1,22 @@
+<input type="text" id="txtAd" />
+<button onclick="ekle()" id="btnEkle">
+  isimleri ekle
+</button>
+<button id="btnGoster">isimleri göster</button>
+<button id="btnSil">Listeden sil</button>
+
+<div id="liste"></div>
+<script>
+  let kankalar = [];
+  function ekle() {
+    kankalar.push(document.querySelector("#txtAd").value);
+    document.querySelector("#txtAd").value=null;
+  }
+  document.querySelector("#btnGoster").addEventListener("click", function () {
+    document.querySelector("#liste").innerHTML = kankalar.join("<br>");
+  });
+  document.querySelector("#btnSil").addEventListener("click", function () {
+    kankalar.pop();
+    document.querySelector("#liste").innerHTML = kankalar.join("<br>");
+  });
+</script>

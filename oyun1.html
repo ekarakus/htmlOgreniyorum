@@ -1,0 +1,46 @@
+<style>
+    #kutu {
+        background-color: red;
+        height: 30px;
+        width: 30px;
+        position: relative;
+        display: none;
+    }
+    #skor {
+        font-size: 50pt;
+        background-color: blue;
+        color: white;
+        width: 10vw;
+    }
+    #anakutu {
+        height: 600px;
+        width: 600px;
+        background-color: yellow;
+    }
+</style>
+<script>
+    let skor = 0;
+    let oyna = () => {
+        skor = 0;
+        document.querySelector("#kutu").style.display = "block";
+        let oyun = setInterval(function () {
+            let sol = Math.ceil(Math.random() * 600) - 30;
+            let ust = Math.ceil(Math.random() * 600) - 30;
+            if (sol < 0) sol = 0;
+            if (ust < 0) ust = 0;
+            document.querySelector("#kutu").style.left = sol + "px";
+            document.querySelector("#kutu").style.top = ust + "px";
+        }, 1000);
+    }
+    function arttir() {
+        skor++;
+        document.querySelector("#skor").innerHTML = skor;
+    }
+</script>
+<body>
+    <div id="anakutu">
+        <div id="kutu" onclick="arttir()"></div>
+    </div>
+    <div id="skor"> 0 </div>
+    <button onclick="oyna()" type="button">Çalıştır</button>
+</body>

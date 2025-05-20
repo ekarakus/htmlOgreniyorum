@@ -1,0 +1,58 @@
+<style>
+  input{
+    color:blue;
+    background-color: yellow;
+    border:3px solid dodgerblue ;
+  }
+  form {
+    background-color: lightgreen;
+    padding: 20px;
+    margin:20px auto;
+    width: 50%;
+
+  }
+  button {
+    background: red;
+    color:white;
+    font-size: 18px;
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;;
+  }
+</style>
+<form action="">
+  <table>
+    <tr>
+      <td>
+        <label for="adsoyad">Ad soyad</label>
+      </td>
+      <td>
+        <input type="text" id="adsoyad" />
+      </td>
+    </tr>
+    <tr>
+      <td>Cinsiyet</td>
+      <td>
+        <input type="radio" id="c1" />
+        <label for="c1">Bay</label>
+        <input type="radio" id="c2" />
+        <label for="c2">Bayan</label>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="il">İl</label></td>
+      <td>
+        <select id="id">
+          <option value="34">İstanbul</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit">Gönder</button>
+      </td>
+    </tr>
+  </table>
+</form>

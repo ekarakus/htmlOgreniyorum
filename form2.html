@@ -1,0 +1,59 @@
+<h1>Ögrenci kayıt formu</h1>
+
+<form action="">
+  <table>
+    <tr>
+      <td><label for="ad">Adınız</label></td>
+      <td><input type="text" required id="ad" name="ad" /></td>
+    </tr>
+    <tr>
+      <td><label for="email">E-posta</label></td>
+      <td>
+        <input
+          type="email"
+          placeholder="birisi@mail.com"
+          required
+          name="email"
+          id="email"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Cinsiyet</td>
+      <td>
+        <input checked type="radio" value="E" name="cins" id="cinsiyet1" />
+        <label for="cinsiyet1">Erkek</label> <br />
+        <input type="radio" value="K" name="cins" id="cinsiyet2" /><label
+          for="cinsiyet2"
+          >Kadın</label
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>Yabancı Diller</td>
+      <td>
+        <input type="checkbox" name="dil" id="dil1" value="en" />
+        <label for="dil1">İngilizce </label><br />
+        <input type="checkbox" name="dil" id="dil2" value="de" />
+        <label for="dil2">Almanca</label> <br />
+        <input type="checkbox" name="dil3" id="dil3" value="fr" />
+        <label for="dil3">Fransızca</label>
+      </td>
+    </tr>
+    <tr>
+      <td><label id="dogumTarihi">Doğum Tarihi</label></td>
+      <td><input type="date" name="dtarih" id="dogumTarihi" /></td>
+    </tr>
+    <tr>
+        <td><label for="il">Doğduğu il</label></td>
+        <td>
+            <select name="il" id="il">
+                <option value="İstanbul"></option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2"><button type="submit">Kaydet</button></td>
+    </tr>
+  </table>
+</form>

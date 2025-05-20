@@ -1,0 +1,31 @@
+<!-- burada  jquery desteği olsun -->
+<!-- ve bir sayı girildiğinde bu sayının faktöriyelini hesaplayan bir uygulama yapın -->
+<!-- ve bu uygulamayı butona tıklandığında çalıştırın -->
+<!-- ve sonucu bir div içinde gösterin -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <button id="btnHesapla">Hesapla</button>
+    <div id="divTabela"></div>
+    <input type="text" id="txtSayi" />
+  </body>
+  
+<script>
+    $('#btnHesapla').click(function() {
+        var sayi = $('#txtSayi').val();
+        var faktoriyel = 1;
+        for (var i = 1; i <= sayi; i++) {
+            faktoriyel *= i;
+        }
+        $('#divTabela').html(faktoriyel);
+    });
+  </script>
+</html>

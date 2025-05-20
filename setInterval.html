@@ -1,0 +1,11 @@
+<div></div>
+<script>
+  let sayac = 6;
+  let islem = setInterval(function () {
+    document.querySelector("div").innerHTML = --sayac;
+    if (sayac == 0) {
+      document.querySelector("div").style.display = "none";
+      clearInterval(islem);
+    }
+  }, 1000);
+</script>

@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <button id="btnStart" type="button">başla</button>
+    <button id="btnStop" type="button">Durdur</button>
+    <div id="siren" style="height: 100vh; width: 100vw"></div>
+  </body>
+
+  <script>
+    let button = document.querySelector("#btnStart");
+   let islem;
+    button.addEventListener("click", function () {
+      let siren = document.querySelector("#siren");
+      let sayac = 1;
+      islem = setInterval(function () {
+        sayac++;
+        if (sayac % 2 == 0) {
+          siren.style.backgroundColor = "red";
+        } else {
+          siren.style.backgroundColor = "blue";
+        }
+      }, 250);
+    });
+    let btnStop=document.querySelector("#btnStop");
+    btnStop.addEventListener("click",function(){
+        clearInterval(islem);
+    })
+  </script>
+</html>

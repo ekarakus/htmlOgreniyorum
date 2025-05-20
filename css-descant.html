@@ -1,0 +1,33 @@
+<body>
+  <ol>
+    <li>Ankara</li>
+    <li>
+      Sivas
+      <ol>
+        <li>
+          İmranlı
+          <ol>
+            <li>Maden</li>
+            <li>Uzuntemür</li>
+          </ol>
+        </li>
+        <li>Zara</li>
+        <li>Divriği</li>
+        <li>Hafik</li>
+        <li>Gürün</li>
+      </ol>
+    </li>
+    <li>Malatya</li>
+  </ol>
+</body>
+<style>
+  body > ol {
+    border: 1px solid red;
+  }
+  body > ol > li > ol {
+    border: 2px blue solid;
+  }
+  body > ol > li > ol > li:nth-child(2) {
+    border: 2px orangered solid;
+  }
+</style>

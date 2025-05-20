@@ -1,0 +1,13 @@
+<body>
+  <div id="tabela"></div>
+</body>
+<script>
+  setInterval(function () {
+    const zaman = new Date();
+    let tabela = document.querySelector("#tabela");
+    let sonuc =
+      zaman.getHours() + ":" + zaman.getMinutes() + ":" 
+      + zaman.getSeconds();
+    tabela.innerHTML = sonuc;
+  }, 1000);
+</script>

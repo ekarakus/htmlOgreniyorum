@@ -1,0 +1,82 @@
+body {
+  background-color: rgb(179, 100, 100);
+}
+
+ol {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 50px;
+  font-size: 20pt;
+}
+nav ol li a {
+  color: darkmagenta;
+  text-decoration: none;
+}
+nav ol li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+main {
+  width: 80%;
+  background-color: darkgray;
+  margin: 30px auto;
+  padding: 20px;
+}
+footer {
+  background-color: black;
+  color: white;
+  font-size: 18pt;
+  font-style: italic;
+  font-weight: bold;
+  height: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+h1 {
+  text-align: center;
+  font-size: 40pt;
+  font-family: "calibri";
+}
+article p {
+  color: brown;
+  font-size: 20pt;
+}
+header {
+  background-color: lightgray;
+  border-radius: 20px 10px 20px 10px;
+}
+form {
+  margin: 50px auto auto auto;
+  background-color: azure;
+}
+input,label,button{
+display: block;
+margin-top: 30px;
+}
+input{
+  background-color: rgb(167, 195, 195);
+  font-size: 20pt;
+  margin: auto;
+}
+label,text{
+  background-color: rgb(172, 192, 185);
+  font-size: 20pt;
+  margin: auto;
+  text-align: center;
+}
+button{
+  background-color: rgb(165, 192, 192);
+  font-size: 20pt;
+  margin: auto;
+}

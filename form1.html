@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form autocomplete="on" 
+    novalidate
+    action="kayit.php" 
+    method="post">
+      <label for="isim">adınız</label>
+      <input id="isim" required name="isim" type="text" /><br>
+      <label for="eposta">eposta</label>
+      <input type="email" name="eposta" id="eposta">
+  <button type="submit">gönder</button><br>
+<div>1 Hobi seç</div>
+  <input type="radio" name="hobi"> Hobi1
+<input type="radio" name="hobi"> Hobi2
+<input type="radio" name="hobi"> Hobi3
+<br>
+<div>İl</div>
+<select name="il" multiple id="il" >
+<option>İstanbul</option>
+<option>aNKARA</option>
+<option>İZMİR</option>
+<option>Aydın</option>
+</select>
+<label for="yorum">AÇıklama</label>
+<textarea name="yorum" id=""></textarea>
+<br>
+diğer alan
+<input type="number" name="" id="">
+    </form>
+  </body>
+</html>

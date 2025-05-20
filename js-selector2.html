@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hata Mesajı</title>
+</head>
+<body>
+  <main class="container">
+    <div id="kutu">
+      <div id="baslik"> Hata </div>
+      <div id="govde"> Çok acayip bir hata oluştu</div>
+      <button id="button">Hata Mesajını Değiştir</button>
+    </div>
+  </main>
+
+  <script>
+    // Butona tıklanma olayını dinle
+    document.getElementById('button').addEventListener('click', function() {
+      // Mesajı değiştir
+      document.getElementById('govde').textContent = 'Çok tehlikeli bir hata oluştu hemen bilgisayarını kapat;!.....';
+      document.getElementById('baslik').textContent = 'Hata Oluştu';
+      document.getElementById('kutu').style.backgroundColor = '#f8d7da'; // Arka plan rengini kırmızı tonlarına ayarla
+      document.getElementById('kutu').style.color = '#721c24'; // Yazı rengini kırmızı tonlarına ayarla
+    });
+  </script>
+</body>
+</html>

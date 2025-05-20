@@ -1,0 +1,63 @@
+<body>
+  <div id="oyun">
+    <button id="btn1">Tıkla !</button>
+    <button id="btn2">Tıkla !</button>
+  </div>
+  <div id="tabela">
+    <span id="skor">0</span>
+  </div>
+  <style>
+    body {
+      background-color: black;
+    }
+    #tabela {
+      margin-top: 20px;
+      text-align: center;
+    }
+    #skor {
+      font-size: 50pt;
+      color: white;
+      background-color: dodgerblue;
+      padding: 20px;
+    }
+    #oyun {
+      border-radius: 20px;
+      width: 50%;
+      background-color: #f9c5ad;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+    }
+    #oyun > button {
+      font-size: 40pt;
+      cursor: hand;
+      padding: 20px;
+      border-radius: 10px;
+      border: 0;
+      color: white;
+      background-color: orangered;
+    }
+  </style>
+  <script>
+    var sayac = 0;
+    let butonlar = document.querySelectorAll("button");
+    butonlar.forEach(function (buton) {
+      // her bir butona tıklama olayı ekle
+      buton.addEventListener("click", function () {
+        //sayacı arttır
+        if (buton.style.opacity == "1") {
+          ++sayac;
+          //sayacı skora yaz
+          document.querySelector("#skor").textContent = sayac;
+        }
+      });
+      buton.addEventListener("mousemove", function () {
+        document.querySelector("#" + buton.id).style.opacity = 0;
+      });
+      buton.addEventListener("mouseout", function () {
+        document.querySelector("#" + buton.id).style.opacity = 1;
+      });
+    });
+  </script>
+</body>

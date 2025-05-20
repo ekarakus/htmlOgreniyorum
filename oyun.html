@@ -1,0 +1,49 @@
+<style>
+  #top {
+    position: relative;
+  }
+  #top img {
+    width: 100px;
+    height: 100px;
+  }
+  #saha {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+<body>
+  <button id="btnBasla">Başlat</button>
+  <div id="saha">
+    <span id="top">
+      <img
+        src="https://cdn.pixabay.com/photo/2013/07/13/10/51/football-157930_1280.png"
+      />
+    </span>
+  </div>
+</body>
+<script>
+  let sayac = 0;
+  document.querySelector("#top img").addEventListener("click", function () {
+    sayac++;
+    alert("Gol " + sayac);
+  });
+  document.querySelector("#btnBasla").addEventListener("click", function () {
+    sayac = 0;
+    let topEni = document.querySelector("#top").offsetWidth;
+    let topBoyu = document.querySelector("#top").offsetHeight;
+    let sahaEni = document.querySelector("#saha").offsetWidth;
+    let sahaBoyu = document.querySelector("#saha").offsetHeight;
+
+    setInterval(function () {
+      let topSol = Math.random() * (sahaEni - topEni);
+      let topUst = Math.random() * (sahaBoyu - topBoyu);
+      document.querySelector("#top").style.left = topSol + "px";
+      document.querySelector("#top").style.top = topUst + "px";
+    }, 250);
+  });
+</script>

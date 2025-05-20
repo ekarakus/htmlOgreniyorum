@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polis Animasyonu</title>
+    <style>
+      audio{
+        display:none;
+      }
+        body {
+            display: flex;
+            background-color: blue;
+          flex-direction:column;
+        }
+      button{
+        height:10vh;
+      }
+        div {
+          width:100%;
+          flex-basis:auto;
+            font-size: 50pt;
+            padding: 10px;
+            margin: auto auto;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="polisDurumu"> POLİS DURDU</div>
+    <audio id="ses" controls src="https://assets.mixkit.co/active_storage/sfx/1642/1642.wav"></audio>
+    <button id="buton" onclick="renklendir()">Oynat</button>
+    <script>
+        let oynat = false;
+        let sayac = 0;
+        let animasyon;
+
+
+        function renklendir() {
+            oynat = !oynat;
+            if (oynat) {
+                document.querySelector("#ses").play();
+                animasyon = setInterval(function () {
+                    let renk = (sayac++ % 2 == 0) ? "red" : "blue";
+                    document.querySelector("body").style.backgroundColor = renk;
+                    document.querySelector("#polisDurumu").innerHTML = '<img style="width:100%;" src="https://media.tenor.com/_JI3rnn-2FsAAAAM/lapd.gif">';
+                     document.querySelector("#buton").innerText = "Durdur";
+                }, 500);
+            } else {
+              document.querySelector("#buton").innerText = "Oynat";
+                document.querySelector("#ses").pause();
+                clearInterval(animasyon);
+                document.querySelector("#polisDurumu").innerText = "POLİS DURDU";
+            }
+        }
+    </script>
+</body>
+</html>

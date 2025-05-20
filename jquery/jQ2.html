@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Text Sync</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#input1').on('keyup', function() {
+                let deger=$(this).val();
+                $('#input2').val(deger);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Metin Kutuları Senkronizasyonu</h1>
+    <label for="input1">Metin Kutusu 1:</label>
+    <input type="text" id="input1">
+    <br><br>
+    <label for="input2">Metin Kutusu 2:</label>
+    <input type="text" id="input2" readonly>
+</body>
+</html>
